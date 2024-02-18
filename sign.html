@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store World - Sign</title>
+    <link rel="stylesheet" href="FRAEMWORKS/all.css">
+    <link rel="stylesheet" href="FRAEMWORKS/bootstrap.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        body::before {
+            content: "";
+            background-image: url(images/picsign.jpg);
+            background-repeat: repeat-y;
+            background-size: cover;
+            background-position: 100% 100%;
+            backdrop-filter: blur(2px);
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-dark d-flex flex-column" style="">
+    
+    <!-- <div class="container-fluid position-absolute fixed-top opacity-25" style="height: 100vh; z-index: -100;">
+        <img class="w-100 h-100 object-fit-cover" src="images/picsign.jpg" alt="">
+    </div> -->
+
+    <header class="container-fluid bg-dark">
+        <nav class="container navbar navbar-expand-md navbar-dark">
+            <a href="index.html" class="navbar-brand"><img src="logo.png" height="30" alt=""></a>
+            <button class="navbar-toggler navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-controls="menu"></button>
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav container-fluid justify-content-end">
+                    <li class="nav-item px-2"><a href="index.html" class="nav-link"><i class="fa fa-home px-1"></i>Home</a></li>
+                    <li class="nav-item px-2"><a href="all.html" class="nav-link"><i class="fa fa-shopping-basket px-1"></i>All</a></li>
+                    <li class="nav-item px-2"><a href="" class="nav-link"><i class="fa fa-newspaper px-1"></i>About</a></li>
+                    <li class="nav-item px-2"><a href="sign.html" class="nav-link active"><i class="fa fa-sign-in px-1"></i>Sign</a></li>
+                </ul>
+                <div class="container-fluid m-auto d-block d-md-none p-0 m-0">
+                    <div class="input-group">
+                        <input type="search" placeholder="Search Produit..." class="form-control" name="" id="">
+                        <input type="submit" value="Search" class="btn btn-outline-info" name="" id="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="w-100 h-100 d-flex flex-column p-md-2">
+
+
+        <main class="container h-100 mt-1 p-2 d-flex justify-content-center align-items-center">
+            <!-- SIGN IN -->
+            <div class="p-2 border border-2 border-dark-subtle rounded-2 w-100" id="signin">
+                <p class="text-white fs-2 text-center">SIGN IN</p>
+                <div class="mb-2">
+                    <label for="" class="form-label text-white">Email</label>
+                    <input type="text" class="form-control" placeholder="Enter Your Email..." required name="" id="">
+                </div>
+                <div class="mb-2">
+                    <label for="" class="form-label text-white">Password</label>
+                    <input type="text" class="form-control" placeholder="Enter Your Password..." required name="" id="">
+                </div>
+                <div class="mb-2 form-check">
+                    <input type="checkbox" class="form-check-input" name="" id="save_acc_site">
+                    <label for="save_acc_site" class="form-check-label text-white small">Save Account in Site</label>
+                </div>
+                <div class="mb-2">
+                    <button class="btn btn-outline-light w-100">Sign In</button>
+                </div>
+                <div class="">
+                    <p class="m-0 py-1"><a href="" class="text-info">Forget Password?</a></p>
+                    <p class="text-white m-0 py-1">You Don't Have Account? <a role="button" id="show_signup" class="link-info">Click Here</a></p>
+                </div>
+            </div>
+            <!-- SIGN UP -->
+            <div class="p-2 border border-2 border-dark-subtle rounded-2 w-100" id="signup" style="display: none;">
+                <p class="text-white fs-2 text-center">SIGN UP</p>
+                <div class="row text-white">
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="Enter First Name...">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Last Name...">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">Email</label>
+                        <input type="text" class="form-control" placeholder="Enter Email...">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">Age</label>
+                        <input type="date" class="form-control" placeholder="Enter Last Name...">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">Profile</label>
+                        <input type="file" class="form-control" placeholder="Enter Last Name...">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">Sexe</label>
+                        <div class="">
+                            <div class="form-check-inline">
+                                <input type="radio" class="form-check-input" name="sexe" id="male">
+                                <label for="male" class="form-check-label">Male</label>
+                            </div>
+                            <div class="form-check-inline">
+                                <input type="radio" class="form-check-input" name="sexe" id="female">
+                                <label for="female" class="form-check-label">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">Password</label>
+                        <input type="text" class="form-control" placeholder="Enter Password...">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="" class="form-label">Confirm Password</label>
+                        <input type="text" class="form-control" placeholder="Confirm Password...">
+                    </div>
+
+
+                    <div class="col-12 text-center mb-2">
+                        <button class="w-50 btn btn-outline-light">Sing Up</button>
+                    </div>
+
+                    <div class="col-12">
+                        <p class="text-white m-0 py-1">You Have Account? <a role="button" id="show_signin" class="link-info">Click Here</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+
+
+    <script>
+        var signup = document.getElementById("signup");
+        var signin = document.getElementById("signin");
+        var show_signup = document.getElementById("show_signup");
+        var show_signin = document.getElementById("show_signin");
+        show_signin.addEventListener("click",function(){
+            signin.style.display = "block";
+            signup.style.display = "none";
+        })
+        show_signup.addEventListener("click",function(){
+            signup.style.display = "block";
+            signin.style.display = "none";
+        })
+    </script>
+
+
+
+    <script src="FRAEMWORKS/all.js"></script>
+    <script src="FRAEMWORKS/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
